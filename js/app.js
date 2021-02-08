@@ -6,6 +6,7 @@ const $galleryWrapper = document.getElementById("js_gallery-wrapper");
 for (const [index, { url, text }] of imagesUrl.entries()) {
   $galleryWrapper.innerHTML += `
     <div class="galery-item" style="background-image: url(${url})">
+      <input type="hidden" autocomplete="off" value="${url}">
       <div class="gallery-text">
         <p>Foto ${index + 1}</p>
         <span>${text}</span>

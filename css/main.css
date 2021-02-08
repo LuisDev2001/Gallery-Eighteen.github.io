@@ -6,6 +6,10 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+.gallery {
+  z-index: 20;
+}
+
 .gallery h1 {
   margin: 1rem 0;
   text-align: center;
@@ -96,6 +100,68 @@ body {
 .footer i {
   color: #fc3b3b;
   font-size: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0.8;
+
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.overlay.active {
+  opacity: 0.8;
+  visibility: visible;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+.content-show-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-show-image.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 99;
+}
+.content-show-image .btn.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.content-show-image .btn.close::before {
+  content: "\f00d";
+  font-family: FontAwesome;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.overlay-image {
+  border: 1px solid #ffffff;
+  width: 300px;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
