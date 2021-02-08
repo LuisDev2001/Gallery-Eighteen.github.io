@@ -34,7 +34,6 @@ $galleryWrapper.addEventListener("click", (event) => {
 
 const getUrlImage = ($event) => {
   const URL_IMAGE = $event.target.querySelector("input").value;
-  console.log(URL_IMAGE);
   return URL_IMAGE;
 };
 
