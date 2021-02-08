@@ -434,3 +434,8 @@ fieldset {
 textarea {
   resize: vertical;
 }
+
+img {
+  width: 100%;
+  display: block;
+}
