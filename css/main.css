@@ -6,8 +6,13 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+.gallery h1 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
 .gallery-wrapper {
-  padding: 30px 1rem;
+  padding: 0px 1rem 30px 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -97,7 +102,7 @@ body {
   .gallery-wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    padding: 60px 1rem;
+    padding: 0 1rem 60px 1rem;
   }
 }
 

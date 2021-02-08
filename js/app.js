@@ -3,13 +3,12 @@ import { imagesUrl } from "./images.js";
 const $galleryWrapper = document.getElementById("js_gallery-wrapper");
 
 // Insertar url images dynamic
-for (const [index, img] of imagesUrl.entries()) {
-  const URL = img.url;
+for (const [index, { url, text }] of imagesUrl.entries()) {
   $galleryWrapper.innerHTML += `
-    <div class="galery-item" style="background-image: url(${URL})">
+    <div class="galery-item" style="background-image: url(${url})">
       <div class="gallery-text">
         <p>Foto ${index + 1}</p>
-        <span>Te amo</span>
+        <span>${text}</span>
       </div>
       <span class="gallery-heart" id="js_heart-button">
         <i class="far fa-heart" id="js_icon-heart-${index + 1}"></i>
