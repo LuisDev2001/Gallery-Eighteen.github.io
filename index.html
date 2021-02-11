@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add swipper styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Eighteen</title>
   </head>
   <body>
     <main class="gallery">
       <h1>Feliz 14 de Febrero mi amor !</h1>
+      <p class="gallery-text-heart">
+        Amor este 14 de Febrero es raro, se que no podremos estar juntos como
+        nos gustase en este dia tan especial en donde ambos celebramos este dia
+        del amor...
+      </p>
       <section class="gallery-wrapper" id="js_gallery-wrapper"></section>
+      <!-- Slider main container -->
+      <div class="title-slider">
+        <h2 class="swiper-container-title">Nuestro slide de fotos mi amor</h2>
+      </div>
+      <section class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper" id="js_swipper-wrapper"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer-text">
@@ -25,10 +48,14 @@
         <img src="" id="js_image-show" alt="Foto" />
       </div>
     </div>
+    <!-- swipper scripst cdn -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/b7301c403c.js"
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/app.js"></script>
+    <script src="./js/swipper.js"></script>
   </body>
 </html>

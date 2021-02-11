@@ -1,7 +1,9 @@
 import { imagesUrl } from "./images.js";
+import { imagesSliderUrl } from "./imagesSlider.js";
 
 const $galleryWrapper = document.getElementById("js_gallery-wrapper");
 const $btnClose = document.getElementById("js_btn-close-overlay");
+const $wrapperSwipper = document.getElementById("js_swipper-wrapper");
 
 // Insertar url images dynamic
 for (const [index, { url, text, state }] of imagesUrl.entries()) {
@@ -20,6 +22,11 @@ for (const [index, { url, text, state }] of imagesUrl.entries()) {
   localStorage.setItem("state", state);
 }
 
+// Insertar url images dynamic slider
+for (const [index, { url }] of imagesSliderUrl.entries()) {
+  $wrapperSwipper.innerHTML += `<div class="swiper-slide" style="background-image: url(${url})"><input type="hidden" autocomplete="off" value="${url}"></div>`;
+}
+
 $galleryWrapper.addEventListener("click", (event) => {
   if (event.target.className === "far fa-heart") {
     event.target.className = "fas fa-heart";
@@ -31,7 +38,11 @@ $galleryWrapper.addEventListener("click", (event) => {
     openShowImage(event);
   }
 });
-
+$wrapperSwipper.addEventListener("click", (event) => {
+  if (event.target.classList[0] === "swiper-slide") {
+    openShowImage(event);
+  }
+});
 const getUrlImage = ($event) => {
   const URL_IMAGE = $event.target.querySelector("input").value;
   return URL_IMAGE;
